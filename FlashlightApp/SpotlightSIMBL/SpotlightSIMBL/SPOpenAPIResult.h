@@ -14,4 +14,4 @@
 - (id)initWithQuery:(NSString *)query result:(FlashlightResult *)result;
 @end
 
-Class __SS_SPOpenAPIResultClass();
+Class __SS_SPOpenAPIResultClass(void);

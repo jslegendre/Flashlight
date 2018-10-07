@@ -102,7 +102,7 @@ _Flashlight_WeakRefWrapper* __SS_SSOpenAPIResult_getCustomPreviewReference(_SPOp
     }
 }
 
-- (BOOL)openWithSearchString:(id)arg1 block:(void (^)())block {
+- (BOOL)openWithSearchString:(id)arg1 block:(void (^)(void))block {
     FlashlightResult *result = objc_getAssociatedObject(self, @selector(resultAssociatedObject));
     
     SPPreviewController *previewVC = [self sharedCustomPreviewController];

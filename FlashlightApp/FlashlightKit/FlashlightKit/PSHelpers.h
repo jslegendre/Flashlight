@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^PSVoidBlock)();
+typedef void (^PSVoidBlock)(void);
 
 extern const double PSMinimalProbability;
 extern const double PSFreeTextProbability;
@@ -32,7 +32,7 @@ double PSSmoothLogProb(double logProb);
 
 @interface NSMutableDictionary (PS)
 
-- (id)objectForKey:(id)aKey settingDefaultToValue:(id(^)())defaultFunction;
+- (id)objectForKey:(id)aKey settingDefaultToValue:(id(^)(void))defaultFunction;
 
 @end
 

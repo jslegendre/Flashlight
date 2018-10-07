@@ -65,7 +65,7 @@
                 if (entryData && !zipError) {
                     NSString *writeToPath = [tempDirectory.path stringByAppendingPathComponent:entry.fileName];
                     if (![[NSFileManager defaultManager] fileExistsAtPath:[writeToPath stringByDeletingLastPathComponent]]) {
-                        [[NSFileManager defaultManager] createDirectoryAtPath:[writeToPath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:NO];
+                        [[NSFileManager defaultManager] createDirectoryAtPath:[writeToPath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:NULL];
                     }
                     if ([[writeToPath pathExtension] isEqualToString:@"bundle"]) {
                         continue;
@@ -93,7 +93,7 @@
             // finally, do an atomic move:
             [[NSFileManager defaultManager] replaceItemAtURL:[NSURL fileURLWithPath:destPath] withItemAtURL:[NSURL fileURLWithPath:sourcePath] backupItemName:nil options:0 resultingItemURL:nil error:nil];
             
-            _installedPluginName = pluginName;
+            self->_installedPluginName = pluginName;
             PluginModel *pluginModel = [PluginModel installedPluginNamed:pluginName];
             // done:
             if (pluginModel.openPreferencesOnInstall && !self.isUpdate) {

@@ -16,7 +16,7 @@
 #define DIGILEN (int)(log10 (INT_MAX) +3)
 
 
-extern int yyparse();
+extern int yyparse(void);
 extern char * yytext;
 typedef struct yy_buffer_state *YY_BUFFER_STATE;
 void yy_switch_to_buffer(YY_BUFFER_STATE);
