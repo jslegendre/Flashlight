@@ -26,9 +26,6 @@
 @property (nonatomic,weak) IBOutlet NSButton *errorButton;
 @property (nonatomic,strong) void (^errorButtonAction)(void);
 
-@property (nonatomic) IBOutlet NSToolbarItem *toolbarItem;
-@property (nonatomic) IBOutlet NSView *toggleView;
-
 @property (nonatomic) IBOutlet NSOutlineView *sourceList;
 
 - (void)showPluginWithName:(NSString *)name;
