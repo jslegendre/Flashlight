@@ -315,7 +315,7 @@
         if (self.SIMBLOn) {
             [self toggleFlashlightEnabled:nil];
         }
-        [[NSWorkspace sharedWorkspace] selectFile:[[NSBundle mainBundle] bundlePath] inFileViewerRootedAtPath:nil];
+        [[NSWorkspace sharedWorkspace] selectFile:[[NSBundle mainBundle] bundlePath] inFileViewerRootedAtPath:@""];
         [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.5];
     }
 }

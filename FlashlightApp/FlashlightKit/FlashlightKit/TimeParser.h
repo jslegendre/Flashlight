@@ -16,7 +16,7 @@
 #define DIGILEN (int)(log10 (INT_MAX) +3)
 
 
-extern int yyparse();
+extern int yyparse(void);
 extern char * yytext;
 typedef struct yy_buffer_state *YY_BUFFER_STATE;
 void yy_switch_to_buffer(YY_BUFFER_STATE);
@@ -30,28 +30,28 @@ struct modifier
     
 };
 
-struct modifier mymodifier;
-struct modifier fromModifier;
+extern struct modifier mymodifier;
+extern struct modifier fromModifier;
 
-struct tm currentTime;
+extern struct tm currentTime;
 
-struct tm *str_time;
-int *timePointer[7];
+extern struct tm *str_time;
+extern int *timePointer[7];
 
-struct tm temp_time;
-struct tm set_time;
+extern struct tm temp_time;
+extern struct tm set_time;
 
-time_t curtime;
-time_t initialTime;
+extern time_t curtime;
+extern time_t initialTime;
 
 
-int changeAmount[9];
-int fromChangeAmount[9];
+extern int changeAmount[9];
+extern int fromChangeAmount[9];
 
-int specAmount[3];
-int finalSpecAmount[3];
+extern int specAmount[3];
+extern int finalSpecAmount[3];
 
-char * unusedText;
+extern char * unusedText;
 
 
 void setCurrentTime(void);

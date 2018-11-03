@@ -24,10 +24,7 @@
 @property (nonatomic,weak) IBOutlet NSView *errorBanner;
 @property (nonatomic,weak) IBOutlet NSTextField *errorText;
 @property (nonatomic,weak) IBOutlet NSButton *errorButton;
-@property (nonatomic,strong) void (^errorButtonAction)();
-
-@property (nonatomic) IBOutlet NSToolbarItem *toolbarItem;
-@property (nonatomic) IBOutlet NSView *toggleView;
+@property (nonatomic,strong) void (^errorButtonAction)(void);
 
 @property (nonatomic) IBOutlet NSOutlineView *sourceList;
 

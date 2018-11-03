@@ -9,6 +9,6 @@
 #ifndef FlashlightKit_FlashlightSystemHelpers_h
 #define FlashlightKit_FlashlightSystemHelpers_h
 
-BOOL FlashlightIsDarkModeEnabled();
+BOOL FlashlightIsDarkModeEnabled(void);
 
 #endif

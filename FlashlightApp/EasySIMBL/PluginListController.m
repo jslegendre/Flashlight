@@ -69,8 +69,6 @@ NSString * const kCategoryUpdates = @"_Updates";
     if (!self.initializedYet) {
         self.selectedCategory = @"Featured";
         
-        [self.toolbarItem setView:self.toggleView];
-        
         self.sourceList.selectionHighlightStyle = NSTableViewSelectionHighlightStyleSourceList;
         
         self.initializedYet = YES;
