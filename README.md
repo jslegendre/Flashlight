@@ -36,9 +36,10 @@ Credits
 -------
 
 - [nate-parrott](https://github.com/nate-parrott) - [Original Flashlight](https://github.com/nate-parrott/Flashlight)
-- [alexzielenski](https://github.com/alexzielenski) - [macOS 10.10+ Opee support](https://github.com/alexzielenski/Flashlight)
+- [alexzielenski](https://github.com/alexzielenski) - [macOS 10.10 support](https://github.com/alexzielenski/Flashlight)
 - [w0lfschild](https://github.com/w0lfschild) - [macOS 10.10 - 10.12 support](https://github.com/w0lfschild/Flashlight)    
 - [krystofcelba](https://github.com/krystofcelba) - [macOS 10.13 support](https://github.com/krystofcelba/Flashlight)
+- [ThatsJustCheesy](https://github.com/ThatsJustCheesy) - [macOS 10.14 support](https://github.com/ThatsJustCheesy/Flashlight)
 
 
 Translations
