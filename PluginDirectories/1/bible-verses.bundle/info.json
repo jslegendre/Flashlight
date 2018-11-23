@@ -1,0 +1,12 @@
+{
+  "categories" : [
+    "Search"
+  ],
+  "displayName" : "Bible Verse Lookup",
+  "name" : "bible-verse",
+  "description" : "Search for any Bible reference and the text will be returned!",
+  "examples" : [
+    "find Matt.1.1",
+    "find Matthew 1:1-12"
+  ]
+}
