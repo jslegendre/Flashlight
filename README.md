@@ -59,7 +59,7 @@ Translations
 - [dougian](http://github.com/dougian) for Greek
 - [Kejk](http://github.com/kejk) for Swedish
 - [majk-p](https://github.com/majk-p) for Polish
-- [jurgemaister](https://github.com/jurgemaister) for Norweigan
+- [jurgemaister](https://github.com/jurgemaister) for Norwegian
 - [/vlcekmi3](https://github.com/vlcekmi3) for Czech
 
 License
