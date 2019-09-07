@@ -1,0 +1,6 @@
+find ~reference(Matt.1.1)
+find ~reference(Matt.1.1-12)
+find ~reference(Matthew.1.1)
+find ~reference(Matthew.1.12)
+find ~reference(Matt 1:1)
+find ~reference(Matt 1:1-12)
