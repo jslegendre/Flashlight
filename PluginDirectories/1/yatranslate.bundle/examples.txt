@@ -1,0 +1,4 @@
+ytr enru ~text(this is a text)
+ytr ruen ~text(this is a text)
+ytr enes ~text(this is a text)
+ytr rues ~text(this is a text)

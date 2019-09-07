@@ -1,0 +1,7 @@
+{
+  "name": "yatranslate",
+  "displayName": "Yandex Translate",
+  "description": "Translate words and phrases with Yandex (ytr).",
+  "examples": ["ytr enru This text will be translated from English to Russian", "ytr ruen Перевод текста", "ytr esen Te amo, España!"],
+  "categories": ["Utilities", "Language"]
+}
