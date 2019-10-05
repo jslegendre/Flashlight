@@ -1,4 +1,5 @@
-Flashlight (for macOS 10.10+) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nate-parrott/Flashlight?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Flashlight (for macOS 10.10+) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MacEnhance/MacForge)
+[![Discord](https://img.shields.io/discord/608740492561219617)](https://discordapp.com/channels/608740492561219617/608740492640911378)
 ==========
 
 Flashlight is an **unofficial Spotlight API** that allows you to programmatically process queries and add additional results.
@@ -6,12 +7,10 @@ Flashlight is an **unofficial Spotlight API** that allows you to programmaticall
 Installation
 ------------
 
-1. Download [mySIMBL](https://github.com/w0lfschild/app_updates/raw/master/mySIMBL/mySIMBL_master.zip)
-2. Download [Flashlight](https://github.com/w0lfschild/app_updates/raw/master/Flashlight/Flashlight_master.zip)
-3. Unzip downloads
-4. Open `mySIMBL.app` and install SIMBL
-5. Open `Flashlight.app` and install the plugins you want to use
-5. Start using _Flashlight_
+1. Download and open [MacForge](https://github.com/w0lfschild/app_updates/raw/master/MacForge/MacForge.zip)
+2. Install [Flashlight](https://www.macenhance.com/mflink?macforge://github.com/w0lfschild/myRepo/raw/master/mytweaks/com.nateparrott.Flashlight)
+3. Open `Flashlight` and install the plugins you want to use
+4. Start using _Flashlight_
 
 Example
 -------
