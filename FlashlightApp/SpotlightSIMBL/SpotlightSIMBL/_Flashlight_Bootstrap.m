@@ -73,7 +73,10 @@ ctor {
 
 + (void)load {
     NSLog(@"Hello from Flashlight! (%@)", [[NSBundle bundleWithIdentifier:@"com.nateparrott.SpotlightSIMBL"] bundlePath]);
-    [_FlashlightPluginEngine shared]; // initialize the engine, including creating the plugins directory
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_FlashlightPluginEngine shared]; // initialize the engine, including creating the plugins directory
+    });
 }
 
 @end

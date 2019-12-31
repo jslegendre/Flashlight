@@ -8,11 +8,9 @@
 
 #import "ZKSwizzle.h"
 #import "SPOpenAPIResult.h"
-#import "SPKQuery.h"
-#import "SPResult.h"
-#import "SPResponse.h"
-#import "SPDictionaryResult.h"
+#import "SFText.h"
 #import "SPPreviewController.h"
+#import "SPGroupHeadingResult.h"
 #import <WebKit/WebKit.h>
 #import "_Flashlight_Bootstrap.h"
 #import <FlashlightKit/FlashlightKit.h>
@@ -45,19 +43,17 @@ _Flashlight_WeakRefWrapper* __SS_SSOpenAPIResult_getCustomPreviewReference(_SPOp
 }
 
 @interface _SPOpenAPIResult (Compile)
-- (void)setTitle:(NSString *)str;
+- (void)setTitle:(id)str;
 - (FlashlightResult *)resultAssociatedObject;
 @end
 
 @implementation _SPOpenAPIResult
 
 - (id)initWithQuery:(NSString *)query result:(FlashlightResult *)result {
-    Class superclass = NSClassFromString(@"PRSResult");
-    void (*superIMP)(id, SEL, NSString*, NSString*) = (void *)[superclass instanceMethodForSelector: @selector(initWithContentType:displayName:)];
-    static NSInteger i = 0;
-    NSString *contentType = [NSString stringWithFormat:@"%li", i++]; // cycle the contentType to prevent the system from dropping new results that have an unchanged title
-    superIMP(self, _cmd, contentType, result.title); // TODO: what does contentType actually do? it probably isn't a mime type
-    [self setTitle: result.title];
+    Class superclass = NSClassFromString(@"SPGroupHeadingResult");
+    void (*superIMP)(id, SEL, NSString*, id, NSString*) = (void *)[superclass instanceMethodForSelector: @selector(initWithDisplayName:keyID:focusString:)];
+    superIMP(self, _cmd, result.title, nil, result.title);
+    [self setTitle:[SFText textWithString:result.title]];
     objc_setAssociatedObject(self, @selector(resultAssociatedObject), result, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return self;
 }
@@ -118,10 +114,9 @@ _Flashlight_WeakRefWrapper* __SS_SSOpenAPIResult_getCustomPreviewReference(_SPOp
 Class __SS_SPOpenAPIResultClass() {
     Class c = NSClassFromString(@"SPOpenAPIResult");
     if (c) return c;
-    
-    c = objc_allocateClassPair(ZKClass(PRSResult), [@"SPOpenAPIResult" UTF8String], 0);
+
+    c = objc_allocateClassPair(ZKClass(SPMetadataResult), "SPOpenAPIResult", 0);
     objc_registerClassPair(c);
-    
     
     ZKSwizzle(_SPOpenAPIResult, SPOpenAPIResult);
     

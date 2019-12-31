@@ -48,7 +48,7 @@
             [runArgs insertObject:[resultView resultOfOutputFunction] atIndex:0];
         }
         
-        NSString *scriptPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"run_plugin" ofType:@"pyc"];
+        NSString *scriptPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"run_plugin" ofType:@"py"];
         // NSTask* task = [NSTask withPathMarkedAsExecutableIfNecessary:[[NSBundle bundleForClass:[self class]] pathForResource:@"run_plugin" ofType:@"pyc"]];
         NSTask *task = [[NSTask alloc] init];
         task.launchPath = @"/usr/bin/python";

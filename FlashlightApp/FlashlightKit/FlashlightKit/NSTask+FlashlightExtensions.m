@@ -73,7 +73,7 @@ void _flashlight_markPathExecutable(NSString *path) {
     self.standardOutput = stdoutPipe;
     FlashlightFileReader *outputReader = [[FlashlightFileReader alloc] initWithFileHandle:stdoutPipe.fileHandleForReading];
     
-    void (^onDone)() = ^{
+    void (^onDone)(void) = ^{
         NSData *errorData = [errorReader allData];
         NSData *data = [outputReader allData];
         callback(data, errorData);

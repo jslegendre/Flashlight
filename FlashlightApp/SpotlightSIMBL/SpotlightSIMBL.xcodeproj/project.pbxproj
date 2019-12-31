@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A99BA423BBD256003779B4 /* SearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A99BA323BBD256003779B4 /* SearchFoundation.framework */; };
 		5F5B174D1A05758800809207 /* _Flashlight_Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B174C1A05758800809207 /* _Flashlight_Bootstrap.m */; };
 		5F5B183C1A06C6EE00809207 /* NSObject+LogProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B183B1A06C6EE00809207 /* NSObject+LogProperties.m */; };
 		5F5B183F1A06CB0000809207 /* SPOpenAPIResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5B183E1A06CB0000809207 /* SPOpenAPIResult.m */; };
@@ -56,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09486FD023BBD0880035E726 /* SFText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFText.h; sourceTree = "<group>"; };
+		09A99BA323BBD256003779B4 /* SearchFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SearchFoundation.framework; path = ../../../../../../../System/Library/PrivateFrameworks/SearchFoundation.framework; sourceTree = "<group>"; };
 		5CD4D342205A660E00E7CA41 /* SPKQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPKQuery.h; sourceTree = "<group>"; };
 		5F5B17411A05757500809207 /* SpotlightSIMBL.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotlightSIMBL.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5B17451A05757500809207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,12 +273,21 @@
 			files = (
 				FA4550A01C99FA0C007E4F81 /* Cocoa.framework in Frameworks */,
 				5FF5D40E1A675B7D00641D7A /* FlashlightKit.framework in Frameworks */,
+				09A99BA423BBD256003779B4 /* SearchFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09A99BA223BBD256003779B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09A99BA323BBD256003779B4 /* SearchFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F5B17381A05757400809207 = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +295,7 @@
 				5FF5D4031A675B5300641D7A /* FlashlightKit.xcodeproj */,
 				5F5B17431A05757500809207 /* SpotlightSIMBL */,
 				5F5B17421A05757500809207 /* Products */,
+				09A99BA223BBD256003779B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -515,6 +528,7 @@
 				5F5B180D1A057AB100809207 /* SPWebSliceController.h */,
 				5F5B180E1A057AB100809207 /* SPWebViewController.h */,
 				5CD4D342205A660E00E7CA41 /* SPKQuery.h */,
+				09486FD023BBD0880035E726 /* SFText.h */,
 			);
 			path = SpotlightHeaders;
 			sourceTree = "<group>";
@@ -561,8 +575,8 @@
 				TargetAttributes = {
 					5F5B17401A05757400809207 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = EX596BNL45;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = G9T88PYL48;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -571,6 +585,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 5F5B17381A05757400809207;
@@ -742,11 +757,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = NO;
-				DEVELOPMENT_TEAM = EX596BNL45;
+				DEVELOPMENT_TEAM = G9T88PYL48;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Flashlight-ecbbmgoifutwxzgzjgruzjyizltl/Build/Products/Debug",
@@ -762,6 +777,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SYMROOT = "$(PROJECT_DIR)/build";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -770,11 +786,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = EX596BNL45;
+				DEVELOPMENT_TEAM = G9T88PYL48;
 				DSTROOT = /;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -791,6 +807,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SYMROOT = "$(PROJECT_DIR)/build";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
