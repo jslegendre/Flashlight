@@ -31,6 +31,7 @@ We welcome all contributions to the Flashlight core and plugins. See [the wiki](
 - [w0lfschild](https://github.com/w0lfschild) - [macOS 10.10 - 10.12 support](https://github.com/w0lfschild/Flashlight)    
 - [krystofcelba](https://github.com/krystofcelba) - [macOS 10.13 support](https://github.com/krystofcelba/Flashlight)
 - [ThatsJustCheesy](https://github.com/ThatsJustCheesy) - [macOS 10.14 support](https://github.com/ThatsJustCheesy/Flashlight)
+- [jslegendre](https://github.com/jslegendre) - [macOS 10.15 support](https://github.com/jslegendre/Flashlight)
 
 
 ## Translations
