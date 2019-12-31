@@ -1,21 +1,13 @@
 import os
 import i18n
 
-
 def run(cmd, lock=False):
     if lock is True:
-        # Taken from http://apple.stackexchange.com/a/123738
-        import objc
-        # We don't load module_globals as we only need the principalClass
-        bundle = objc.loadBundle('AppleKeychainExtra',
-                                 bundle_path="/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu",
-                                 module_globals=None, scan_classes=False)
-        instance = bundle.principalClass().alloc().init()
-        instance.performSelector_withObject_("_lockScreenMenuHit:", None)
+        from ctypes import CDLL
+        login = CDLL("/System/Library/PrivateFrameworks/login.framework/Versions/A/login")
+        login.SACLockScreenImmediate(None)
     else:
         os.system(cmd)
-
-
 def results(parsed, original_query):
     if ("lock_command" in parsed):
         return {
@@ -39,7 +31,7 @@ def results(parsed, original_query):
         title = i18n.localstr('Put Mac to sleep')
         return {
             "title": title,
-            "run_args": ["osascript -e 'tell app \"System Events\" to sleep'"]
+            "run_args": ["pmset sleepnow"]
         }
 
     if ('shutdown_command' in parsed):
@@ -57,11 +49,11 @@ def results(parsed, original_query):
     if ('empty_trash_command' in parsed):
         return {
             "title": i18n.localstr('Empty the Trash'),
-            "run_args": ["osascript -e 'tell app \"Finder\" to empty the trash'"]
+            "run_args": ["rm -rf ~/.Trash/*"]
         }
 
     if('screen_saver' in parsed):
         return {
             "title": i18n.localstr('Turn on Screen Saver'),
-            "run_args": ["open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"]
+            "run_args": ["open -a ScreenSaverEngine"]
         }
